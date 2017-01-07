@@ -11,6 +11,10 @@ module.exports = {
   context: `${src}`,
   devtool: '#source-map',
   target: 'node',
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
   entry: {
     main: `${src}/main.js`,
   },
