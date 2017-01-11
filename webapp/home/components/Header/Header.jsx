@@ -1,8 +1,16 @@
 import React, { PureComponent } from 'react'
 
+import Style from './styles'
+
 export default class Header extends PureComponent {
   render = () => {
-    const dom = () => <div>你好世界</div>
-    return dom
+    return (
+      <div>
+        <Style />
+        <div className="header">
+          你好头部
+        </div>
+      </div>
+    )
   }
 }
