@@ -3,7 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
-const src = path.resolve(__dirname, '../src')
+const src = path.resolve(__dirname, '../webapp')
 const dst = path.resolve(__dirname, '../public/static')
 const lib = path.resolve(__dirname, '../node_modules')
 const commonLibs = [src, path.resolve(lib, 'normalize.css'), path.resolve(lib, 'font-awesome')]

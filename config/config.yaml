@@ -1,0 +1,9 @@
+development:
+  host: smcocodev.com
+  port: 9999
+test:
+  host: smcocodev.com
+  port: 9999
+production:
+  host: smcoco.com
+  port: 9999

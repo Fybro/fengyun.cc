@@ -2,7 +2,7 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const src = path.resolve(__dirname, '../src')
+const src = path.resolve(__dirname, '../webapp')
 const lib = path.resolve(__dirname, '../node_modules')
 const commonLibs = [src, path.resolve(lib, 'normalize.css'), path.resolve(lib, 'font-awesome')]
 const MODULE_NAME = process.env.MODULE_NAME ? process.env.MODULE_NAME : 'home'
