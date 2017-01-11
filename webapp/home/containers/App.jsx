@@ -3,6 +3,7 @@ import { BrowserRouter, Match, Miss, Link } from 'react-router'
 /* eslint import/no-unresolved: 0, import/no-extraneous-dependencies: 0, import/extensions: 0 */
 import NoMatch from '../../common/components/PageNotFound'
 
+import Header from '../components/Header'
 import Home from '../routes/home'
 import About from '../routes/about'
 import Topics from '../routes/topics'
@@ -12,6 +13,7 @@ class App extends PureComponent {
     /* eslint no-undef: 0 */
     <BrowserRouter>
       <div>
+        <Header />
         <ul>
           <li><Link to="/"><i className="fa fa-user" /></Link></li>
           <li><Link to="/about">About</Link></li>
