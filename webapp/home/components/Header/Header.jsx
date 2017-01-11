@@ -8,7 +8,9 @@ export default class Header extends PureComponent {
       <div>
         <Style />
         <div className="header">
-          你好头部
+          <div className="container">
+            你好头部
+          </div>
         </div>
       </div>
     )
