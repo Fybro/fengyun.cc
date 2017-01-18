@@ -3,22 +3,20 @@ import React, { PureComponent } from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router'
 
-import createStore from './store/createStore'
-
 import Style from './styles'
 
 type Props = {
     routes: any,
-    state: any,
+    store: any,
 }
 
 class Root extends PureComponent<void, Props, void> {
     render() {
-        const { routes: Routes, state } = this.props
+        const { routes: Routes, store } = this.props
         return (
             <div>
                 <Style />
-                <Provider store={createStore(state)}>
+                <Provider store={store}>
                     <BrowserRouter>
                         <Routes />
                     </BrowserRouter>

@@ -1,12 +1,13 @@
-import render from '../common/index'
-import Root from './Root'
+// @flow
+import render from '../common/render'
+import App from './containers/App'
 
 const root = document.getElementById('root')
 
-render(Root, root)
+render(App, root)
 
 if (module.hot) {
-    module.hot.accept('./Root', () => {
-        render(Root, root)
+    module.hot.accept('./containers/App', () => {
+        render(App, root)
     })
 }

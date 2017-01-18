@@ -36,7 +36,7 @@
       }
     },
     "build:web": {
-      "command": "webpack --config .webpack/webpack.config.prod.js -p",
+      "command": "webpack --config .bin/webpack/webpack.config.prod.js -p",
       "env": {
         "NODE_ENV": "production"
       }

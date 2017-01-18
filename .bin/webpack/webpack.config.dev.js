@@ -3,7 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const conf = require('../../webapp/conf/conf')
-const {env, host, devPort, port} = conf
+const { env, host, devPort, port } = conf
 
 const src = path.resolve(__dirname, '../../webapp')
 const lib = path.resolve(__dirname, '../../node_modules')
@@ -38,15 +38,6 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /\.html$/,
-            include: [src],
-            loaders: [
-                'file-loader?name=index.[ext]',
-                'extract-loader',
-                'raw-loader',
-                'string-replace-loader?search=__public_path__&replace=&flags=g',
-            ],
-        }, {
             test: /\.s?css$/,
             include: commonLibs,
             loader: 'style-loader!css-loader?sourceMap!sass-loader?sourceMap',
