@@ -42,7 +42,7 @@
       }
     },
     "prod": {
-      "command": "nodemon .bin/develop.js -w app -e js --delay 2.5",
+      "command": "node .bin/develop.js",
       "env": {
         "NODE_ENV": "production"
       }
