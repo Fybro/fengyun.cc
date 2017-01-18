@@ -1,6 +1,7 @@
 // @flow
 import path from 'path'
 import express from 'express'
+import compression from 'compression'
 import vhost from 'vhost'
 import Log from 'log'
 
@@ -14,8 +15,9 @@ const app = express()
 const log = new Log('info')
 
 const staticApp = express()
-staticApp.use('/', express.static(path.resolve(__dirname, '../public')))
+staticApp.use('/', express.static(path.resolve(__dirname, '../public/static')))
 
+app.use(compression())
 app.use(vhost(`static.${host}`, staticApp))
 
 app.use(vhost(host, homeApp))
