@@ -1,7 +1,8 @@
+// @flow
 import render from './render'
 
-export default (router) => {
+export default (router: any) => {
     router.get('/', (req, res) => {
-        res.send(render({}, req.url, {}))
+        res.send(render({}, '/', '风云首页', ''))
     })
 }

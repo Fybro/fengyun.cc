@@ -9,14 +9,14 @@ if (process.env.NODE_ENV === 'development') {
 
 const development = {
     env,
-    host: 'dev.uweb.smcoco.com',
+    host: 'fengyundev.cc',
     devPort: 3000,
     port: 9999,
     isDevelopment: true,
 }
 
 const production = Object.assign({}, development, {
-    host: 'uweb.smcoco.com',
+    host: 'fengyun.cc',
     port: 80,
     isDevelopment: false,
 })

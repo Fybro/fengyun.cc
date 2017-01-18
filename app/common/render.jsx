@@ -4,15 +4,7 @@ import { renderToString } from 'react-dom/server'
 import Root from './Root'
 import template from './template'
 
-export default (routes, state, location, p) => {
-    const { title, style, entry } = p
-    return template({
-        entry: entry ? entry : '',
-        title: title ? title : '',
-        style: style ? style : '',
-        state: state ? state : '',
-        content: renderToString(
-            <Root routes={routes} state={state} location={location} />,
-        ),
-    })
-}
+export default (routes, state = {}, location = '/', entry = 'home', title = '风云', style = '') => template(
+    renderToString(<Root routes={routes} state={state} location={location} />),
+    entry, title, style, state,
+)
