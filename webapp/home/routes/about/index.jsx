@@ -4,7 +4,7 @@ import React from 'react'
 export default class About extends React.PureComponent {
 
     static defaultProps = {
-        maxLoops: 19,
+        maxLoops: 1999,
     }
 
     static propTypes = {
@@ -15,7 +15,7 @@ export default class About extends React.PureComponent {
         loopsRemaining: this.props.maxLoops,
     }
     render = () => {
-        const el = <div>{this.state.loopsRemaining + 444}</div>
+        const el = <div>{this.state.loopsRemaining + 666000000}</div>
         return el
     }
 }

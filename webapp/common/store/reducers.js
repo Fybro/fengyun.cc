@@ -1,17 +1,19 @@
 import { combineReducers } from 'redux'
 
 import app from './modules/app'
+import page from './modules/page'
 
 const rootReducer = asyncReducers => combineReducers({
-  app,
-  ...asyncReducers,
+    page,
+    app,
+    ...asyncReducers,
 })
 
 export const injectReducer = (store, { key, reducer }) => {
-  if (Object.hasOwnProperty.call(store.asyncReducers, key)) return
+    if (Object.hasOwnProperty.call(store.asyncReducers, key)) return
     /* eslint no-param-reassign: 0 */
-  store.asyncReducers[key] = reducer
-  store.replaceReducer(rootReducer(store.asyncReducers))
+    store.asyncReducers[key] = reducer
+    store.replaceReducer(rootReducer(store.asyncReducers))
 }
 
 export default rootReducer

@@ -5,25 +5,26 @@
   "repository": "https://github.com/oorococo/smcoco_com.git",
   "license": "MIT",
   "scripts": {
-    "start": "bnr start",
-    "start:app": "bnr start:app",
+    "dev": "bnr dev",
+    "dev:app": "bnr dev:app",
     "build:app": "bnr build:app",
     "build:web": "bnr build:web",
     "flow": "flow",
     "js-beautify": "js-beautify src/index.jsx",
     "render": "babel-node --presets latest,stage-0,react webapp/main.js",
     "caddy": "caddy -conf caddy/Caddyfile",
-    "caddy:dev": "caddy -conf caddy/CaddyfileDev"
+    "caddy:dev": "caddy -conf caddy/CaddyfileDev",
+    "prod": "bnr prod"
   },
   "betterScripts": {
-    "start": {
-      "command": "webpack-dev-server --config .webpack/webpack.config.dev.js -d --hot --inline",
+    "dev": {
+      "command": "webpack-dev-server --config .bin/webpack/webpack.config.dev.js -d --hot --inline",
       "env": {
         "NODE_ENV": "development"
       }
     },
-    "start:app": {
-      "command": "babel-watch src/main.js --presets latest,stage-0,react",
+    "dev:app": {
+      "command": "nodemon .bin/develop.js -w app",
       "env": {
         "NODE_ENV": "development"
       }
@@ -39,6 +40,12 @@
       "env": {
         "NODE_ENV": "production"
       }
+    },
+    "prod": {
+      "command": "nodemon .bin/develop.js -w app -e js --delay 2.5",
+      "env": {
+        "NODE_ENV": "production"
+      }
     }
   },
   "dependencies": {
@@ -47,6 +54,7 @@
     "compress": "^0.99.0",
     "compression": "^1.6.2",
     "express": "^4.14.0",
+    "flow": "^0.2.3",
     "font-awesome": "^4.7.0",
     "html-minify": "^0.3.2",
     "immutable": "^3.8.1",
@@ -88,6 +96,7 @@
     "html-loader": "^0.4.4",
     "js-beautify": "^1.6.7",
     "node-sass": "^4.1.1",
+    "nodemon": "^1.11.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^4.1.1",
     "string-replace-loader": "^1.0.5",

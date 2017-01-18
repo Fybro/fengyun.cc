@@ -1,13 +1,12 @@
-import boot from '../common/boot'
-import App from './containers/App'
-import './index.html'
+import render from '../common/index'
+import Root from './Root'
 
 const root = document.getElementById('root')
 
-boot(root, App)
+render(Root, root)
 
 if (module.hot) {
-  module.hot.accept('./containers/App', () => {
-    boot(root, App)
-  })
+    module.hot.accept('./Root', () => {
+        render(Root, root)
+    })
 }
