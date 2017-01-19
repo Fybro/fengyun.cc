@@ -1,8 +1,8 @@
 // @flow
 import conf from '../../webapp/conf/conf'
 
-const { env, host, devPort, port, isDevelopment } = conf
-const publicPath = env === 'development' ? `//${host}:${devPort}` : `//static.${host}:${port}`
+const { env, host, devPort, isDevelopment } = conf
+const publicPath = env === 'development' ? `//${host}:${devPort}` : `//static.${host}`
 
 export default (content: string, entry: string, title: string, style: string, state: any): string => `
 <!DOCTYPE html>

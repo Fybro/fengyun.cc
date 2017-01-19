@@ -6,5 +6,5 @@ static.fengyun.cc {
 
 fengyun.cc, auth.fengyun.cc {
   gzip
-  proxy / localhost:9999
+  proxy / fengyun:9999
 }
