@@ -17,7 +17,7 @@ const development = {
 
 const production = Object.assign({}, development, {
     host: 'fengyun.cc',
-    port: 80,
+    port: 9999,
     isDevelopment: false,
 })
 

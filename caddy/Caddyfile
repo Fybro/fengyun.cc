@@ -1,0 +1,10 @@
+static.fengyun.cc {
+  root ./public/static
+  cors
+  gzip
+}
+
+fengyun.cc, auth.fengyun.cc {
+  gzip
+  proxy / localhost:9999
+}

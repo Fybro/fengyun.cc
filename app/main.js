@@ -1,6 +1,7 @@
 // @flow
 import path from 'path'
 import express from 'express'
+import cors from 'cors'
 import compression from 'compression'
 import vhost from 'vhost'
 import Log from 'log'
@@ -15,6 +16,7 @@ const app = express()
 const log = new Log('info')
 
 const staticApp = express()
+staticApp.use(cors())
 staticApp.use('/', express.static(path.resolve(__dirname, '../public/static')))
 
 app.use(compression())
