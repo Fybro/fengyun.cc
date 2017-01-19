@@ -1,10 +1,4 @@
-static.fengyun.cc {
-  root ./public/static
-  cors
-  gzip
-}
-
-fengyun.cc, auth.fengyun.cc {
+fengyun.cc, auth.fengyun.cc, ttd2.fengyun.cc {
   gzip
   proxy / fengyun:9999
 }
