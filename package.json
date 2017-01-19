@@ -41,7 +41,7 @@
         "NODE_ENV": "production"
       }
     },
-    "prod": {
+    "serve": {
       "command": "pm2 start build/main.js",
       "env": {
         "NODE_ENV": "production"

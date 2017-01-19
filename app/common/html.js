@@ -1,8 +1,8 @@
 // @flow
 import conf from '../../webapp/conf/conf'
 
-const { env, host, devPort, isDevelopment } = conf
-const publicPath = env === 'development' ? `//${host}:${devPort}` : `//static.${host}`
+const { env, host, devPort, isDevelopment, publicPath } = conf
+const publicBase = env === 'development' ? `//${host}:${devPort}` : `//${publicPath}`
 
 export default (content: string, entry: string, title: string, style: string, state: any): string => `
 <!DOCTYPE html>
@@ -12,8 +12,8 @@ export default (content: string, entry: string, title: string, style: string, st
     <title>${title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     ${isDevelopment ? '<!--' : ''}
-    <link rel="stylesheet" href="${publicPath}/common/common.css">
-    <link rel="stylesheet" href="${publicPath}/${entry}/${entry}.css">
+    <link rel="stylesheet" href="${publicBase}/common/common.css">
+    <link rel="stylesheet" href="${publicBase}/${entry}/${entry}.css">
     ${isDevelopment ? '-->' : ''}
     <style>${style}</style>
 </head>
@@ -21,7 +21,7 @@ export default (content: string, entry: string, title: string, style: string, st
     <div id="root">${content}</div>
 </body>
 <script>window.__INITIAL_STATE__ = ${JSON.stringify(state)}</script>
-<script src="${publicPath}/common/common.js"></script>
-<script src="${publicPath}/${entry}/${entry}.js"></script>
+<script src="${publicBase}/common/common.js"></script>
+<script src="${publicBase}/${entry}/${entry}.js"></script>
 </html>
 `
