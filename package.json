@@ -14,7 +14,7 @@
     "render": "babel-node --presets latest,stage-0,react webapp/main.js",
     "caddy": "caddy -conf caddy/Caddyfile",
     "caddy:dev": "caddy -conf caddy/CaddyfileDev",
-    "prod": "bnr prod"
+    "serve": "bnr serve"
   },
   "betterScripts": {
     "dev": {
@@ -42,7 +42,7 @@
       }
     },
     "prod": {
-      "command": "pm2 start .bin/develop.js",
+      "command": "pm2 start build/main.js",
       "env": {
         "NODE_ENV": "production"
       }
