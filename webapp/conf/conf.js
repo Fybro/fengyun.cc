@@ -19,7 +19,7 @@ const production = Object.assign({}, development, {
     host: 'fengyun.cc',
     port: 9999,
     isDevelopment: false,
-    publicPath: 'staticfengyuncc.oss-cn-hangzhou.aliyuncs.com',
+    publicPath: 'ok18bsern.qnssl.com',
 })
 
 module.exports = {

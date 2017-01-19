@@ -4,13 +4,12 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const conf = require('../../webapp/conf/conf')
-const { env, host, devPort, port } = conf
+const { env, host, devPort, port, publicPath } = conf
 
 const src = path.resolve(__dirname, '../../webapp')
 const dst = path.resolve(__dirname, '../../public/static')
 const lib = path.resolve(__dirname, '../../node_modules')
 const commonLibs = [src, path.resolve(lib, 'normalize.css'), path.resolve(lib, 'font-awesome')]
-const publicPath = ''
 
 module.exports = {
     context: `${src}`,
@@ -21,7 +20,7 @@ module.exports = {
     },
     output: {
         path: `${dst}/`,
-        publicPath: `//static.${host}:${port}/`,
+        publicPath: `//${publicPath}/`,
         filename: '[name]/[name].js',
     },
     resolve: {
