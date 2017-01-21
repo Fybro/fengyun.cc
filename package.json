@@ -11,7 +11,7 @@
     "build:app": "bnr build:app",
     "build:web": "bnr build:web",
     "build": "npm run build:web & npm run build:app",
-    "prod": "bnr serve",
+    "prod": "bnr prod",
     "caddy": "caddy -conf caddy/Caddyfile"
   },
   "betterScripts": {
