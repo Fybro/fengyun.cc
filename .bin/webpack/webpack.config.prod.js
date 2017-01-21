@@ -20,7 +20,7 @@ module.exports = {
     context: `${src}`,
     devtool: '#source-map',
     entry: Object.assign({}, entris, {
-        common: ['react', 'react-router', 'redux', 'react-redux', 'normalize.css', 'font-awesome/css/font-awesome.css', `${src}/styles/index.scss`],
+        common: ['react', 'react-router', 'redux', 'react-redux', 'normalize.css', 'font-awesome/css/font-awesome.css', `${src}/common/scss/index.scss`],
     }),
     output: {
         path: `${dst}/`,

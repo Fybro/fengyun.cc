@@ -1,4 +1,4 @@
-import { fontFamilies, fontSizes, bodies } from './variables'
+import { fontFamilies, fontSizes, bodies, link, lineHeight } from './variables'
 
 export const reboot = `
     html {
@@ -16,11 +16,18 @@ export const reboot = `
         background-color: ${bodies.bg};
         font-family: ${fontFamilies.base};
         font-size: ${fontSizes.base};
+        line-height: ${lineHeight.base};
     }
     ul, li, ol, l1 {
         list-style: none;
         margin: 0;
         padding: 0;
+    }
+    a {
+        color: ${link.color};
+    }
+    a:hover {
+        color: ${link.hoverColor};
     }
 `
 export default {

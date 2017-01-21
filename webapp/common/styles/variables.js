@@ -61,3 +61,20 @@ export const grid = {
     colCounts: 12,
     colPadding: 10,
 }
+
+export const link = {
+    color: brands.primary,
+    hoverColor: '#23527c',
+}
+
+export const lineHeight = {
+    base: 1.5,
+    sm: 1.5,
+    lg: 1.3,
+}
+
+export const radius = {
+    base: '0.25rem',
+    sm: '0.2rem',
+    lg: '0.3rem',
+}

@@ -24,7 +24,12 @@ const production = Object.assign({}, development, {
     publicPath: 'fengyun.cc.smcoco.com',
 })
 
+const debug = Object.assign({}, production, {
+    host: 'fengyundev.cc',
+})
+
 module.exports = {
     development,
     production,
+    debug,
 }[env]

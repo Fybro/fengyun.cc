@@ -2,7 +2,9 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router'
 
-import './style.scss'
+import conf from '../../../conf/conf'
+
+import { headerStyle } from './styles'
 
 export type Props = {
     navsLeft: any,
@@ -11,40 +13,29 @@ export type Props = {
 
 export default class Header extends PureComponent<void, Props, void> {
     render = () => {
-        const { navsLeft, navsRight } = this.props
         return (
             <div>
+                <style>
+                    {headerStyle}
+                </style>
                 <div className="header">
                     <div className="ctn">
                         <div className="r fl jc-b">
                             <div className="header-left">
-                                <ul className="fl w-3">
-                                    {
-                                        navsLeft.map((nav, key) => {
-                                            const isRight = nav.title === '更'
-                                            return (
-                                                <li key={key} className={`${isRight ? 'header-nav-right' : ''}`}>
-                                                    <Link activeClassName="active" to={nav.href}>
-                                                        {key === 0 ? <i className="fa fa-home" /> : undefined}{nav.title}
-                                                    </Link>
-                                                </li>
-                                            )
-                                        })
-                                    }
+                                <ul className="fl">
+                                    <li>
+                                        <img
+                                            className="block header-logo"
+                                            src={`//${conf.imgPubPath}/images/fybro_logo.jpg${conf.imgPs}`} alt=""
+                                        />
+                                    </li>
+                                    <li>
+                                        <a href="http://ttd2.fengyun.cc:9999">游戏</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="header-right">
                                 <ul className="fl">
-                                    {
-                                        navsRight.map((nav, key) => {
-                                            const isRight = nav.title === '更多'
-                                            return (
-                                                <li key={key} className={`${isRight ? 'header-nav-right' : ''}`}>
-                                                    <Link to={nav.href}>{nav.title}</Link>
-                                                </li>
-                                            )
-                                        })
-                                    }
                                 </ul>
                             </div>
                         </div>

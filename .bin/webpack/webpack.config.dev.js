@@ -24,7 +24,7 @@ module.exports = {
     },
     entry: {
         [MODULE_NAME]: ['react-hot-loader/patch', `${src}/${MODULE_NAME}/index.jsx`],
-        common: ['react', 'react-router', 'redux', 'react-redux', 'normalize.css', 'font-awesome/css/font-awesome.css', `${src}/styles/index.scss`],
+        common: ['react', 'react-router', 'redux', 'react-redux', 'normalize.css', 'font-awesome/css/font-awesome.css', `${src}/common/scss/index.scss`],
     },
     output: {
         publicPath: `//${host}:${devPort}/`,

@@ -11,8 +11,9 @@
     "build:app": "bnr build:app",
     "build:web": "bnr build:web",
     "build": "npm run build:web & npm run build:app",
-    "prod": "bnr prod",
-    "caddy": "caddy -conf caddy/Caddyfile"
+    "debug": "bnr debug",
+    "stop": "bnr stop",
+    "prod": "bnr prod"
   },
   "betterScripts": {
     "dev:web": {
@@ -39,8 +40,20 @@
         "NODE_ENV": "production"
       }
     },
+    "debug": {
+      "command": "pm2 stop all && pm2 start build/main.js",
+      "env": {
+        "NODE_ENV": "debug"
+      }
+    },
+    "stop": {
+      "command": "pm2 stop all",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
     "prod": {
-      "command": "pm2 start build/main.js",
+      "command": "pm2 stop all && pm2 start build/main.js",
       "env": {
         "NODE_ENV": "production"
       }

@@ -1,20 +1,19 @@
 {
   "presets": [
-    ["latest", {
+    [
+      "latest", {
       "es2015": {
         "modules": false
       }
-    }],
-    "stage-0",
-    "react"
+    }
+    ], "stage-0", "react"
   ],
   "plugins": [
   ],
   "env": {
     "development": {
       "plugins": [
-        "typecheck",
-        "react-hot-loader/babel"
+        "typecheck", "react-hot-loader/babel"
       ]
     }
   }

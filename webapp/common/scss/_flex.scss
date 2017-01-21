@@ -6,11 +6,11 @@
 
 // transition
 .fl-1 {
-    flex: 1 1 auto; /* default 0 1 auto */
+    flex: 1 1 auto;
 }
 
 .fl-0 {
-    flex: 0 1 auto; /* default 0 1 auto */
+    flex: 0 1 auto;
 }
 
 // direction
@@ -115,10 +115,6 @@
     align-self: baseline;
 }
 
-  .as-q      {
+.as-q {
     align-self: stretch;
 }
-
-
-
-
