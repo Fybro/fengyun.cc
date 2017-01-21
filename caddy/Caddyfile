@@ -1,4 +1,0 @@
-fengyun.cc, auth.fengyun.cc {
-  gzip
-  proxy / fengyun:9999
-}

@@ -14,7 +14,7 @@ const development = {
     port: 9999,
     isDevelopment: true,
     imgPubPath: 'fengyun.cc.smcoco.com',
-    imgPs: '@!common',
+    imgPs: '',
 }
 
 const production = Object.assign({}, development, {

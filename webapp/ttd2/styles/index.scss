@@ -1,0 +1,48 @@
+.ttd2-home {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    overflow: auto;
+    padding-bottom: 18vw;
+}
+
+.ttd2-download-btn-wrap {
+    background-color: #000;
+    padding: 9vw 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.ttd2-download-btn {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 45%;
+    height: 9vw;
+    border: 4px solid #d4d4d4;
+    background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, #e8543f), color-stop(100%, #d9331a)) #E54028;
+    background: -webkit-linear-gradient(top, #e8543f, #d9331a) #E54028;
+    background: linear-gradient(to bottom, #e8543f, #d9331a) #E54028;
+    border-color: rgba(0, 0, 0, .4);
+    color: #FFF;
+    text-shadow: 0 -1px 1px rgba(103, 24, 13, .35);
+    border-radius: 90px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, .5), 0 1px 2px rgba(0, 0, 0, .2);
+    padding: 0;
+    font-size: 16px;
+}
+
+.ttd2-download-btn:hover, .ttd2-download-btn:active {
+    color: #FFF;
+    background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, #eb6855), color-stop(100%, #d9331a));
+    background: -webkit-linear-gradient(top, #eb6855, #d9331a);
+    background: linear-gradient(to bottom, #eb6855, #d9331a);
+}
