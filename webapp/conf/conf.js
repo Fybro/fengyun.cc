@@ -13,6 +13,8 @@ const development = {
     devPort: 3000,
     port: 9999,
     isDevelopment: true,
+    imgPubPath: 'staticfengyuncc.oss-cn-hangzhou.aliyuncs.com',
+    imgPs: '',
 }
 
 const production = Object.assign({}, development, {

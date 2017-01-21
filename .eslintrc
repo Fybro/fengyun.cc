@@ -22,24 +22,24 @@
   "rules": {
     "max-len": 0,
     "indent": [
-      2,
+      "error",
       4
     ],
     "semi": [
-      2,
+      "error",
       "never"
     ],
     "react/jsx-indent": [
-      2,
+      "error",
       4
     ],
     "react/jsx-indent-props": [
-      2,
+      "error",
       4
     ],
     "react/prop-types": 0,
     "react/prefer-stateless-function": 0,
-    "flowtype-errors/show-errors": 2
+    "flowtype-errors/show-errors": "error"
   },
   "settings": {
     "flowtype": {

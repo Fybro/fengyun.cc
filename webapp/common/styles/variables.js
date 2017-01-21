@@ -56,3 +56,8 @@ export const fontSizes = {
     sm: '.875rem',
     xs: '.75rem',
 }
+
+export const grid = {
+    colCounts: 12,
+    colPadding: 10,
+}

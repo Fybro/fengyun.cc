@@ -3,6 +3,6 @@ import React from 'react'
 
 export default () => (
     <div>
-        <h2 className="fa fa">sdff dddsdfsdsdfsfsdfsfsdfsfsdfsdf</h2>
+        <h2 className="fa fa">sasdf</h2>
     </div>
 )

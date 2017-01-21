@@ -10,6 +10,7 @@ import conf from '../webapp/conf/conf'
 
 // import authApp from './auth/main'
 import homeApp from './home/main'
+import ttd2App from './ttd2/main'
 
 const { host, port } = conf
 const app = express()
@@ -23,6 +24,7 @@ app.use(compression())
 app.use(vhost(`static.${host}`, staticApp))
 
 app.use(vhost(host, homeApp))
+app.use(vhost(`ttd2.${host}`, ttd2App))
 // app.use(vhost(`auth.${host}`, authApp))
 
 app.listen(port, () => {

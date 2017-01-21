@@ -4,6 +4,8 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const conf = require('../../webapp/conf/conf')
+const modules = require('../../webapp/conf/modules')
+
 const { env, host, devPort, port, publicPath } = conf
 
 const src = path.resolve(__dirname, '../../webapp')
@@ -11,13 +13,15 @@ const dst = path.resolve(__dirname, '../../public/static')
 const lib = path.resolve(__dirname, '../../node_modules')
 const commonLibs = [src, path.resolve(lib, 'normalize.css'), path.resolve(lib, 'font-awesome')]
 
+const entris = modules.map(v => new Object({ [v]: [`${src}/${v}/index.jsx`] }))
+    .reduce((a, b) => Object.assign({}, a, b))
+
 module.exports = {
     context: `${src}`,
     devtool: '#source-map',
-    entry: {
-        home: [`${src}/home/index.jsx`],
-        common: ['react', 'react-router', 'redux', 'react-redux', 'normalize.css', 'font-awesome/css/font-awesome.css'],
-    },
+    entry: Object.assign({}, entris, {
+        common: ['react', 'react-router', 'redux', 'react-redux', 'normalize.css', 'font-awesome/css/font-awesome.css', `${src}/styles/index.scss`],
+    }),
     output: {
         path: `${dst}/`,
         publicPath: `//${publicPath}/`,

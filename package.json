@@ -5,19 +5,17 @@
   "repository": "https://github.com/oorococo/smcoco_com.git",
   "license": "MIT",
   "scripts": {
-    "dev": "bnr dev",
+    "dev:web": "bnr dev:web",
     "dev:app": "bnr dev:app",
+    "start": "npm run dev:web & npm run dev:app",
     "build:app": "bnr build:app",
     "build:web": "bnr build:web",
-    "flow": "flow",
-    "js-beautify": "js-beautify src/index.jsx",
-    "render": "babel-node --presets latest,stage-0,react webapp/main.js",
-    "caddy": "caddy -conf caddy/Caddyfile",
-    "caddy:dev": "caddy -conf caddy/CaddyfileDev",
-    "serve": "bnr serve"
+    "build": "npm run build:web & npm run build:app",
+    "prod": "bnr serve",
+    "caddy": "caddy -conf caddy/Caddyfile"
   },
   "betterScripts": {
-    "dev": {
+    "dev:web": {
       "command": "webpack-dev-server --config .bin/webpack/webpack.config.dev.js -d --hot --inline",
       "env": {
         "NODE_ENV": "development"
@@ -41,7 +39,7 @@
         "NODE_ENV": "production"
       }
     },
-    "serve": {
+    "prod": {
       "command": "pm2 start build/main.js",
       "env": {
         "NODE_ENV": "production"
@@ -99,14 +97,19 @@
     "flow-bin": "^0.37.4",
     "html-loader": "^0.4.4",
     "js-beautify": "^1.6.7",
-    "node-sass": "^4.1.1",
+    "node-sass": "^4.3.0",
     "nodemon": "^1.11.0",
     "raw-loader": "^0.5.1",
+    "sass-lint": "^1.10.2",
     "sass-loader": "^4.1.1",
+    "scss-lint": "^0.0.0",
     "string-replace-loader": "^1.0.5",
     "style-loader": "^0.13.1",
+    "stylelint": "asdf",
     "url-loader": "^0.5.7",
+    "vorpal": "^1.11.4",
     "webpack": "2.2.0-rc.3",
-    "webpack-dev-server": "2.2.0-rc.0"
+    "webpack-dev-server": "2.2.0-rc.0",
+    "yargs": "^6.6.0"
   }
 }
