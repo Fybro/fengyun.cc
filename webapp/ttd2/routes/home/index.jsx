@@ -18,7 +18,7 @@ export default () => (
         </style>
         <div className="r">
             <div className="ttd2-download-btn fl jc-c">
-                <button>启动下载</button>
+                <button className="fl jc-c ai-c">启动下载</button>
             </div>
         </div>
     </div>

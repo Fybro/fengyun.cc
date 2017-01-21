@@ -13,15 +13,15 @@ const development = {
     devPort: 3000,
     port: 9999,
     isDevelopment: true,
-    imgPubPath: 'staticfengyuncc.oss-cn-hangzhou.aliyuncs.com',
-    imgPs: '',
+    imgPubPath: 'fengyun.cc.smcoco.com',
+    imgPs: '@!common',
 }
 
 const production = Object.assign({}, development, {
     host: 'fengyun.cc',
     port: 9999,
     isDevelopment: false,
-    publicPath: 'staticfengyuncc.oss-cn-hangzhou.aliyuncs.com',
+    publicPath: 'fengyun.cc.smcoco.com',
 })
 
 module.exports = {
