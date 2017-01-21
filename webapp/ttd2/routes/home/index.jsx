@@ -9,11 +9,21 @@ export default () => (
                 <img
                     className="block"
                     style={{ width: '100%' }}
-                    src={`//${conf.imgPubPath}/images/ttd2_download_page.png${conf.imgPs}`} alt=""
+                    src={`//${conf.imgPubPath}/images/ttd2_download_page-1.png${conf.imgPs}`} alt=""
+                />
+                <img
+                    className="block"
+                    style={{ width: '100%' }}
+                    src={`//${conf.imgPubPath}/images/ttd2_download_page-2.png${conf.imgPs}`} alt=""
+                />
+                <img
+                    className="block"
+                    style={{ width: '100%' }}
+                    src={`//${conf.imgPubPath}/images/ttd2_download_page-3.png${conf.imgPs}`} alt=""
                 />
             </div>
             <div className="ttd2-download-btn-wrap">
-                <button className="ttd2-download-btn">启动下载</button>
+                <button className="ttd2-download-btn">立即下载安装</button>
             </div>
         </div>
     </div>
