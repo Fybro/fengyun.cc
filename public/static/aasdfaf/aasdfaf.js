@@ -1,2 +1,0 @@
-webpackJsonp([2],{438:function(n,o,a){!function(){throw new Error('Cannot find module "/Users/syang3/Workspace/src/github.com/Fybro/fengyun.cc/webapp/aasdfaf/index.jsx"')}()}},[438]);
-//# sourceMappingURL=aasdfaf.js.map

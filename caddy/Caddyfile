@@ -1,4 +1,4 @@
-fengyun.cc, auth.fengyun.cc, ttd2.fengyun.cc {
+fengyun.cc, auth.fengyun.cc {
   gzip
   proxy / fengyun:9999
 }
