@@ -36,7 +36,7 @@ module.exports = {
             include: commonLibs,
             loader: ExtractTextPlugin.extract({
                 fallbackLoader: 'style-loader',
-                loader: 'css-loader?sourceMap!sass-loader?sourceMap',
+                loader: 'css-loader?sourceMap!postcss-loader!sass-loader?sourceMap',
             }),
         }, {
             test: /\.jsx?$/,
