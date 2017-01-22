@@ -25,6 +25,10 @@ app.use(vhost(`static.${host}`, staticApp))
 
 app.use(vhost(host, homeApp))
 app.use(vhost(`ttd2.${host}`, ttd2App))
+
+app.get('/', (req, res) => {
+    res.send(req.headers.host)
+})
 // app.use(vhost(`auth.${host}`, authApp))
 
 app.listen(port, () => {
