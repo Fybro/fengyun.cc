@@ -27,6 +27,7 @@ app.use(vhost(host, homeApp))
 app.use(vhost(`ttd2.${host}`, ttd2App))
 
 app.get('/', (req, res) => {
+    console.log(req.headers.host)
     res.send(req.headers.host)
 })
 // app.use(vhost(`auth.${host}`, authApp))
