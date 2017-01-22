@@ -13,7 +13,7 @@ const development = {
     devPort: 3000,
     port: 9999,
     isDevelopment: true,
-    imgPubPath: 'fengyun.cc.smcoco.com',
+    imgPubPath: 'static.fengyun.cc',
     imgPs: '',
 }
 
@@ -21,7 +21,7 @@ const production = Object.assign({}, development, {
     host: 'fengyun.cc',
     port: 9999,
     isDevelopment: false,
-    publicPath: 'fengyun.cc.smcoco.com',
+    publicPath: 'static.fengyun.cc',
 })
 
 const debug = Object.assign({}, production, {

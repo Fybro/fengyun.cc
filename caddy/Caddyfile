@@ -1,5 +1,0 @@
-fengyun.cc {
-    gzip
-    cors
-    proxy / fengyun.cc:9999
-}

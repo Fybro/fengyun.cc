@@ -13,7 +13,8 @@
     "build": "npm run build:web & npm run build:app",
     "debug": "bnr debug",
     "stop": "bnr stop",
-    "prod": "bnr prod"
+    "prod": "bnr prod",
+    "cdn": "node .bin/deploy/pushStatic.js"
   },
   "betterScripts": {
     "dev:web": {
@@ -60,9 +61,10 @@
     }
   },
   "dependencies": {
-    "ali-oss": "^4.6.3",
+    "ali-oss": "^4.8.0",
     "autoprefixer": "^6.6.1",
     "axios": "^0.15.3",
+    "co": "^4.6.0",
     "compress": "^0.99.0",
     "compression": "^1.6.2",
     "cors": "^2.8.1",
@@ -70,6 +72,7 @@
     "express": "^4.14.0",
     "flow": "^0.2.3",
     "font-awesome": "^4.7.0",
+    "glob": "^7.1.1",
     "html-minify": "^0.3.2",
     "immutable": "^3.8.1",
     "log": "^1.4.0",
@@ -90,6 +93,7 @@
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-plugin-regenerator": "^6.0.3",
     "babel-plugin-typecheck": "^3.9.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
