@@ -8,7 +8,8 @@ export default class App extends PureComponent<void, void, void> {
 
     render() {
         return (
-            <div><Style />
+            <div>
+                <Style />
                 <Routes />
             </div>
         )

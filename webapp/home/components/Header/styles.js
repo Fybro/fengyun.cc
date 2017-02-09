@@ -14,8 +14,8 @@ const headerNormal = `
     line-height: 50px;
 }
 .header a {
-    display: block;
-    padding: 0 10px;
+    height: 50px;
+    padding: 0 10px; 
     color: ${bodies.inverseColor};
 }
 .header a:hover {
@@ -31,9 +31,10 @@ const headerDesktop = `
     }
     .header li {
         height: 34px;
-        line-height: 34px;
+        line-height: 40px;
     }
     .header a {
+        height: 34px;
         color: #555;
         font-size: ${fontSizes.sm};
     }

@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router'
 
-import conf from '../../../conf/conf'
+import LogoIcon from '../../../common/components/LogoIcon'
 
 import { headerStyle } from './styles'
 
@@ -23,14 +23,16 @@ export default class Header extends PureComponent<void, Props, void> {
                         <div className="r fl jc-b">
                             <div className="header-left">
                                 <ul className="fl">
-                                    <li>
-                                        <img
-                                            className="block header-logo"
-                                            src={`//${conf.imgPubPath}/images/fybro_logo.jpg${conf.imgPs}`} alt=""
-                                        />
+                                    <li className="fl ai-q">
+                                        <Link className="fl ai-c" to="/">
+                                            <LogoIcon color="#c00" width={28} height={28} />
+                                        </Link>
                                     </li>
-                                    <li>
-                                        <a href="http://ttd2.fengyun.cc:9999">游戏</a>
+                                    <li className="fl ai-q">
+                                        <Link to="/games">游戏</Link>
+                                    </li>
+                                    <li className="fl ai-q">
+                                        <Link to="/about">关于</Link>
                                     </li>
                                 </ul>
                             </div>

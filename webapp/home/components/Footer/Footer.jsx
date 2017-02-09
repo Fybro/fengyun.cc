@@ -45,8 +45,9 @@ export default class Banner extends PureComponent<void, Props, void> {
                             }}
                         >
                             {
-                                footLinks1.map(v => (
+                                footLinks1.map((v, k) => (
                                     <a
+                                        key={k}
                                         style={{
                                             color: '#fff',
                                             padding: '5px 10px',
@@ -63,7 +64,7 @@ export default class Banner extends PureComponent<void, Props, void> {
                                 color: '#888',
                             }}
                         >
-                            © 2009-2017 Aliyun.com 版权所有 ICP证：浙B2-20080101
+                            © 2016-2017 fengyun.cc 版权所有 蜀ICP备17001579号-1
                         </div>
                     </div>
                 </div>

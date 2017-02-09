@@ -1,0 +1,74 @@
+@import './variables';
+
+// @container
+$container-padding: 10px;
+//
+.ctn {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+@each $label, $value in $container-max-widths {
+    @media all and (min-width: map_get($grid-breakpoints, $label)) {
+        .ctn {
+            width: $value;
+        }
+    }
+}
+
+// @row
+$col-gutter: (
+    sm: 5px,
+    md: 10px,
+    lg: 20px,
+) !default;
+//
+.r {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//
+@each $label, $value in $col-gutter {
+    .r.r-g-#{$label} {
+        margin-left: -#{$value};
+        > [class^="c-"] {
+            padding-left: -#{$value};
+        }
+    }
+    .r.r-g-#{$label}-v {
+        margin-top: -#{$value};
+        > [class^="c-"] {
+            padding-top: -#{$value};
+        }
+    }
+}
+
+// @col
+$col-counts: 12;
+//
+//for $index from 1 to
+//@each $label, $value in $container-max-widths {
+//    @media all and (min-width: map_get($grid-breakpoints, $label)) {
+//
+//    }
+//}
+//
+//.col#{$infix} {
+//    flex-basis: 0;
+//    flex-grow: 1;
+//    max-width: 100%;
+//}
+//.col#{$infix}-auto {
+//    flex: 0 0 auto;
+//    width: auto;
+//}
+//
+//@for $i from 1 through $columns {
+//    .col#{$infix}-#{$i} {
+//        @include make-col($i, $columns);
+//    }
+//}

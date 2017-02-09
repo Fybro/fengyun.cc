@@ -1,7 +1,7 @@
 // @flow
 import conf from '../../webapp/conf/conf'
 
-const { env, host, devPort, isDevelopment, publicPath } = conf
+const { env, host, devPort, isDevelopment, publicPath, imgPubPath } = conf
 const publicBase = env === 'development' ? `//${host}:${devPort}` : `//${publicPath}`
 
 export default (content: string, entry: string, title: string, style: string, state: any): string => `
@@ -10,6 +10,7 @@ export default (content: string, entry: string, title: string, style: string, st
 <head>
     <meta charset="UTF-8">
     <title>${title}</title>
+    <link href="//${imgPubPath}/images/title_logo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     ${isDevelopment ? '<!--' : ''}
     <link rel="stylesheet" href="${publicBase}/common/common.css">

@@ -1,4 +1,4 @@
-import { breakPoints, bodies, fontSizes } from '../../../../../common/styles/variables'
+import { breakPoints, bodies, fontSizes } from '../../../common/styles/variables'
 
 const headerNormal = `
 

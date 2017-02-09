@@ -1,0 +1,13 @@
+$margin: (
+    xs: 5px,
+    sm: 10px,
+    md: 20px,
+    lg: 30px,
+    xl: 40px,
+);
+
+@each $label, $value in $margin {
+    .mt-#{$label} {
+        margin-top: $value;
+    }
+}

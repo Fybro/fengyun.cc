@@ -17,7 +17,10 @@ const files = glob.sync(`${staticPath}/**/*`, { nodir: true })
 function* push() {
     for (let i = 0; i < files.length; i += 1) {
         const filename = files[i].replace(path.resolve(__dirname, '../../public/static'), '').replace('/', '')
-        yield store.put(filename, path.resolve(__dirname, `../../public/static/${filename}`))
+
+        if (filename.indexOf('images') > -1) {
+            yield store.put(filename, path.resolve(__dirname, `../../public/static/${filename}`))
+        }
     }
 }
 

@@ -2,6 +2,10 @@ export const breakPoints: [number] = [
     0, 576, 768, 992, 1200,
 ]
 
+export const breakPointsName = [
+    'xs', 'sm', 'md', 'lg', 'xl',
+]
+
 export const containerWidths: [number] = [
     540, 720, 960, 1140,
 ]
@@ -77,4 +81,12 @@ export const radius = {
     base: '0.25rem',
     sm: '0.2rem',
     lg: '0.3rem',
+}
+
+export const margins = {
+    xs: 5,
+    sm: 10,
+    md: 20,
+    lg: 30,
+    xl: 40,
 }

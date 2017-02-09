@@ -8,10 +8,11 @@ import NoMatch from '../../common/components/PageNotFound'
 import appActions from '../../common/store/modules/app'
 import pageActions from '../../common/store/modules/page'
 
-import Header from '../components/Header/index'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Home from '../routes/home/index.jsx'
 import About from '../routes/about/index.jsx'
-import Topics from '../routes/topics/index.jsx'
+import Games from './games'
 
 class App extends PureComponent {
 
@@ -24,8 +25,9 @@ class App extends PureComponent {
                 <Header navsLeft={navsLeft} navsRight={navsRight} />
                 <Match exactly pattern="/" component={Home} />
                 <Match pattern="/about" component={About} />
-                <Match pattern="/topics" component={Topics} />
+                <Match pattern="/games" component={Games} />
                 <Miss component={NoMatch} />
+                <Footer />
             </div>
         )
     }
